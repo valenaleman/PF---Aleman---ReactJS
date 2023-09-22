@@ -1,8 +1,14 @@
+import {Routes, Route, Link} from 'react-router-dom';
+
 import React from 'react';
 import NavbarComponent from './components/NavbarComponent';
 import Card from './components/Card';
 import Contador from './components/Contador';
 import { useState } from 'react';
+import Menu from './pages/Menu';
+import Tienda from './pages/Tienda';
+import Redes from './pages/Redes';
+import ItemDetail from './pages/ItemDetail';
 
 const MostrarState = () => {
   const [buttonText, setButtonText] = useState('Apreta en este boton');
@@ -53,6 +59,30 @@ return (
         <MostrarState />
         <Contador />
         <Card description="Dirección: Av. Piedra Buena 4978 Villa Lugano, CABA, Argentina" />
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Menú</Link>
+        </li>
+        <li>
+          <Link to="/tienda">Tienda</Link>
+        </li>
+        <li>
+          <Link to="/redes">Redes</Link>
+        </li>
+      </ul>
+    </nav>
+    <h1>Inicio</h1>
+    <Routes>
+      <Route path='/' element={<Menu />} />
+      <Route path='/tienda' element={<Tienda />} />
+      <Route path='/redes' element={<Redes />} />
+      <Route path='/item/:id' element={<ItemDetail />} />
+    </Routes>
+
+      {/*<Menu />
+      <Tienda />
+      <Redes />*/}
     </div>
   )
 }

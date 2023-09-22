@@ -9,9 +9,9 @@ const NavbarComponent = () => {
   Menú
   </a>
   <ul class="dropdown-menu">
-    <li><a className="dropdown-item" href="#">Menú</a></li>
-    <li><a className="dropdown-item" href="#">Tienda</a></li>
-    <li><a className="dropdown-item" href="#">Redes sociales y contactos</a></li>
+    <li><a className='dropdown-item' href='#'>Menú</a></li>
+    <li><a className='dropdown-item' href='#'>Tienda</a></li>
+    <li><a className='dropdown-item' href='#'>Redes sociales y contactos</a></li>
   </ul>
 </li>
 </div>
