@@ -1,5 +1,5 @@
 const ProductWidget = ({product}) => {
-    return <span>Product, {product.name}</span>
+    return <span>Producto: {product.mame}</span>
 };
 
 export default ProductWidget
