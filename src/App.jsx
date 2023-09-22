@@ -9,6 +9,7 @@ import Menu from './pages/Menu';
 import Tienda from './pages/Tienda';
 import Redes from './pages/Redes';
 import ItemDetail from './pages/ItemDetail';
+import Navbar from './components/Navbar';
 
 const MostrarState = () => {
   const [buttonText, setButtonText] = useState('Apreta en este boton');
@@ -28,6 +29,13 @@ function App() {
     { id: 2, name: 'Pampers - Premium care, piel delicada', price: 5900, content: 58},
     { id: 3, name: 'Pampers - Premium care, recién nacido hipoalergénico', price: 2420, content: 36},
   ]
+
+  const [product, setProduct ] = useState({
+    name: "Babysec",
+    type: "Ultrasec",
+    price: 3200,
+    content: 60,
+  });
 
 return (
     <div className='container'>
@@ -83,6 +91,8 @@ return (
       {/*<Menu />
       <Tienda />
       <Redes />*/}
+
+    <Navbar product={product} />
     </div>
   )
 }
